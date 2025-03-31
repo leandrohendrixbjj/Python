@@ -1,0 +1,11 @@
+1-) ls /usr/bin/python* => Lista todas as versões instaladas do Python
+
+2-) python -V => Informa a versão atual
+
+3-) pyenv versions => Informa a versão atual usada pelo ( pyenv )
+
+4-) pyenv install {3.11.6} => Instala uma nova versão
+
+5-) pyenv local {3.9.18} => Define uma versão local para o projeto
+
+6-) pyenv global {3.9.18} => Define uma versão geral
