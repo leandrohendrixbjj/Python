@@ -1,5 +1,6 @@
-# Conversão de int para float
-idade = 20
-idade_float = float(idade)
+# Converte int para Float
 
-print('Tipo:', type(idade_float)) # Saída: <class 'float'>
+age = 20
+age = float(age)
+
+print(f'Tipo: {type(age)}') # Saída: <class 'float'>

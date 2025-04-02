@@ -1,9 +1,7 @@
-# Tipo float
+# Converte Float para String
+
 altura = 1.75
 
-data = str(altura)
+altura = str(altura)
 
-
-print('Tipo:', type(data)) # Saída: <class 'str'>
-
-print('Tipo', type(altura)) # Saída: <class 'float'>
+print(f'Tipo: {type(altura)}')
