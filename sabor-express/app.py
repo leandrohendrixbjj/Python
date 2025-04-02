@@ -5,13 +5,28 @@ print("""
 ░╚═══██╗██╔══██║██╔══██╗██║░░██║██╔══██╗  ██╔══╝░░░██╔██╗░██╔═══╝░██╔══██╗██╔══╝░░░╚═══██╗░╚═══██╗
 ██████╔╝██║░░██║██████╦╝╚█████╔╝██║░░██║  ███████╗██╔╝╚██╗██║░░░░░██║░░██║███████╗██████╔╝██████╔╝
 ╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░
-            """)
+""")
 
 print('1. Cadastro')
 print('2. Listar')
 print('3. Ativar')
 print('4. Sair \n')
 
+opcoes_list = ['1','2','3','4']
 opcao_selecionada = input('Escolha uma opção:')
 
-print('Sua opção foi:', opcao_selecionada)
+if not opcao_selecionada in opcoes_list:
+    print(f"Opção {opcao_selecionada} não consta na lista!")
+else:
+    match opcao_selecionada:
+        case '1':
+            print('Cadastrar um Restaurante')
+        case '2':
+            print('Listar um Restaurante')
+        case '3':
+            print('Ativar um Restaurante')
+        case _:
+            print('Sair')
+
+
+

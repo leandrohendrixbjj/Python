@@ -1,13 +1,11 @@
-# Using match-case
 
-status = 2
+data = 1
 
-match status:
-    case 1:
-        print("Pending")
-    case 2:
-        print("Approved")
-    case 3:
-        print("Rejected")
-    case _:
-        print("Unknown status")
+if data > 5:
+    print("Data is greater than 1")
+    
+    print("Data is greater than 2")
+    
+    print("Data is greater than 3")
+
+print("Data is greater than 4")
