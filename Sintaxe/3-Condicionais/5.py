@@ -2,6 +2,6 @@
 
 info = 10
 
-data = 'is Big' if info > 5 else 'is Small'
+data = 'This line print True' if info > 5 else 'This line print False'
 
 print(data)

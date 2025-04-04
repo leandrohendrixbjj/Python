@@ -1,7 +1,6 @@
 """"
 complex: é usado para representar números complexos, que são compostos por uma parte real 
-e uma parte imaginária. Em Python é usado para representar números complexos, 
-que são compostos por uma parte real e uma parte imaginária.
+e uma parte imaginária.
 """
 
 # Tipo complex

@@ -10,4 +10,4 @@ if data > 5:
     print("Data is greater than 2")
     print("Data is greater than 3")
 
-print("Data is greater than 4")  # Essa linha será impressa
+print("Data is greater than 4")  # Essa linha não faz parte do bloco if e será impressa
