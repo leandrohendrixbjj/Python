@@ -1,8 +1,6 @@
-# Impressão diagonal direita: 3, 5, 7
+# Impressão diagonal direita CURTA: 3, 5, 7
 
-import os
-
-os.system('cls' if os.name == 'nt' else 'clear')
+import clear
 
 data = [
     [1, 2, 3],
@@ -10,9 +8,7 @@ data = [
     [7, 8, 9]
 ]
 
-for index_row, row in enumerate(data):
-    for index_element, element in enumerate(row):
-        if (index_row + index_element == 2):
-            print(f"{element}", end=' ')
-    print()
+for row in range(len(data)):
+    column = row
+    print(data[row][column])
 

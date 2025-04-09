@@ -1,4 +1,4 @@
-# Impressão diagonal esquerda: 1, 5, 9
+# Impressão diagonal esquerda, Longa: 1, 5, 9
 
 import os 
 os.system('cls' if os.name == 'nt' else 'clear')

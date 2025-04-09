@@ -1,7 +1,6 @@
-# Impressão diagonal direita: 3, 5, 7
+# Impressão diagonal direita Longa: 3, 5, 7
 
 import os
-
 os.system('cls' if os.name == 'nt' else 'clear')
 
 data = [
