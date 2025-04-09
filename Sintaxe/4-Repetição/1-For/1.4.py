@@ -1,4 +1,4 @@
-# For: Impressão de uma Matriz
+# For: Impressão de uma Matriz Simples
 
 data = [
     [1, 2, 3],

@@ -1,0 +1,16 @@
+# Impressão diagonal esquerda: 1, 5, 9
+
+import os 
+os.system('cls' if os.name == 'nt' else 'clear')
+
+data = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+for row_index, row in enumerate(data):
+    for element_row, element in enumerate(row):
+        if (element_row == row_index):
+            print(f"{element}", end=" ")
+        
