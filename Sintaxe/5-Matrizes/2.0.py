@@ -10,7 +10,7 @@ data = [
 ]
 
 for row_index, row in enumerate(data):
-    for element_row, element in enumerate(row):
+    for element_row, result in enumerate(row):
         if (element_row == row_index):
-            print(f"{element}", end=" ")
+            print(f"{result}", end=" ")
         

@@ -43,18 +43,3 @@ class Resturante:
   def ativo(self):
     return "True" if self._ativo else "False"
 
-res = Resturante('pizzaria do João', 'Pizzaria')
-res.update_ativo()
-
-res_1 = Resturante('churrascaria do Zé', 'Churrascaria')
-
-Resturante.list()
-
-#print(res.__str__())  
-
-
-# Exibindo os atributos do objeto
-#print(vars(res))
-
-# Exibindo os métodos e atributos do objeto
-#print(dir(res))  

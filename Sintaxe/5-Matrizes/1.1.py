@@ -1,4 +1,4 @@
-# Impressão diagonal direita Curta: 1, 5, 9
+# Impressão diagonal esquerda, CURTA: 3,5,7
 
 from helper.clear import clear
 clear()
@@ -9,6 +9,6 @@ data = [
     [7, 8, 9]
 ]
 
-for row in range(len(data)):
-    column = row
-    print(data[row][column])
+for data_idx in range(len(data)):
+    column = len(data) - 1 - data_idx
+    print(data[data_idx][column])

@@ -10,8 +10,8 @@ data = [
 ]
 
 for index_row, row in enumerate(data):
-    for index_element, element in enumerate(row):
-        if (index_row + index_element == 2):
-            print(f"{element}", end=' ')
+    for index_column, result in enumerate(row):
+        if (index_row + index_column == 2):
+            print(f"{result}", end=' ')
     print()
 
