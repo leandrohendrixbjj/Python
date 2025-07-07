@@ -1,5 +1,7 @@
-class Resturante:
+from avaliacao import Avaliacao
 
+class Resturante:
+ 
   data = []
 
   """
@@ -14,6 +16,7 @@ class Resturante:
     self._nome = nome.title() 
     self._categoria = categoria.upper()
     self._ativo = False
+    self._avaliacoes = []
     Resturante.data.append(self)
 
   def __str__(self):
@@ -43,3 +46,6 @@ class Resturante:
   def ativo(self):
     return "True" if self._ativo else "False"
 
+  def adicionar_avaliacao(self, cliente, nota):
+    avaliacao = Avaliacao(cliente,nota);
+    self._avaliacoes.append(avaliacao);
