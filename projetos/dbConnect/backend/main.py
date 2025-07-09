@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from infra.database_connection import connect_to_db
-from schemas import PessoaCreate
+from schema.Pessoa import PessoaCreate, PessoaResponse
 from crud import criar_pessoa
 
 app = FastAPI()
@@ -10,7 +10,7 @@ app = FastAPI()
 async def read_root():        
     return {"message": "Hello, World!"}
 
-@app.post("/pessoas", response_model=dict)
+@app.post("/pessoas", response_model=PessoaResponse)
 async def criar_pessoa_endpoint(pessoa: PessoaCreate):
     nova_pessoa = await criar_pessoa(pessoa)
     return nova_pessoa

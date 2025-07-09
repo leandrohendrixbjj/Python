@@ -3,7 +3,7 @@ from datetime import datetime
 
 from fastapi import HTTPException
 from infra.database_connection import connect_to_db
-from schemas import PessoaCreate
+from schema.Pessoa import PessoaCreate
 
 # Configurar logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -20,11 +20,11 @@ async def criar_pessoa(pessoa: PessoaCreate):
         print(f"Registrando pessoa: {pessoa.nome}, Data Resposta: {data_resposta}")
 
         query = """
-        INSERT INTO pessoa (nome, data_resposta)
-        VALUES ($1, $2)
-        RETURNING id, nome, data_criacao, data_resposta
+        INSERT INTO pessoas (nome, data_resposta, email)
+        VALUES ($1, $2, $3)
+        RETURNING id, nome, data_criacao, data_resposta, email
         """
-        values = (pessoa.nome, data_resposta)
+        values = (pessoa.nome, data_resposta, pessoa.email)
         
         nova_pessoa = await db_connection.fetchrow(query, *values)
 
