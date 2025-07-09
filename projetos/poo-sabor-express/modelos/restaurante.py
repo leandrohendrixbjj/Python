@@ -23,29 +23,43 @@ class Resturante:
     return f'{self._nome} - {self._categoria} - {self._ativo}'  
   
   """
-    classmethod recebe a classe como primeiro argumento, em vez da instância
-     1-) Por convenção, chamamos esse primeiro parâmetro de cls (assim como usamos self para instâncias).
-     2-) Ele pode ser usado para acessar ou modificar atributos da classe, ou para criar instâncias alternativas.
+  Classmethod: diz que a função pode ser acessada diretamente pela classe, sem precisar de uma instância.
+  
+  Geralmente recebe como primeiro parâmetro a própria classe (cls), Isso permite que você acesse
+  atributos e métodos da classe diretamente, sem precisar de uma instância.
+
+  Lembrado que existem diferenças importantes entre classmethod e staticmethod
   """  
   @classmethod
   def list(cls):
-    print(f'{"Nome":<25} {"Categoria":<25} {"Situação":<5}')
+    print(f'{"Nome":<25} {"Categoria":<25} {"Situação":<10} {"Média":<5}')
     for data in Resturante.data:
-      print(f'{data._nome.ljust(25)} {data._categoria.ljust(25)} {data._ativo}')  
+      print(f'{data._nome.ljust(25)} {data._categoria.ljust(25)} {str(data._ativo):<10} {data.calcular_media():<5.2f}')  
 
   def update_ativo(self):
     self._ativo = not self._ativo
 
   """
-  Property: sinaliza ao desenvolvedor (ou a si mesmo no futuro) que esse atributo:
-    1- Não deve ser acessado diretamente fora da classe
-    2- Pode estar sujeito a mudança
-    3- Pode ter lógica especial envolvida no acesso (como uma propriedade @property depois)  
+  Property: Método pode ser acessado como um atributo, mas na verdade é um método. 
+  Exemplo: r.ativo ao invés de r.ativo(). Encapsulamento com sintaxe limpa, 
+  Você esconde a lógica interna de um atributo, mas permite o acesso como se fosse um atributo comum
+
+  Temos outras vantagens de usar property, essa é a que aplicamos no contexto atual.
   """
   @property
   def ativo(self):
     return "True" if self._ativo else "False"
+  
+  @property
+  def calcular_media(self):
+    if not self._avaliacoes:
+      return 0
+    total = sum(avaliacao._nota for avaliacao in self._avaliacoes)
+    return total / len(self._avaliacoes)  
+
 
   def adicionar_avaliacao(self, cliente, nota):
-    avaliacao = Avaliacao(cliente,nota);
-    self._avaliacoes.append(avaliacao);
+    avaliacao = Avaliacao(cliente,nota)
+    self._avaliacoes.append(avaliacao)
+
+  

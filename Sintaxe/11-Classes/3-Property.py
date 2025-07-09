@@ -1,10 +1,10 @@
 """
-  Property: recomendado principalmente quando você quer encapsular acesso a atributos:
-  acesso pareça direto (obj.atributo), mas nos bastidores haja lógica adicional      
-  Você quer que saldo funcione normalmente, mas internamente ele calcula o juros.
+  Property: Método pode ser acessado como um atributo, mas na verdade é um método. 
+  Exemplo: conta.saldo ao invés de conta.saldo(). Encapsulamento com sintaxe limpa, 
+  Você esconde a lógica interna de um atributo, mas permite o acesso como se fosse um atributo comum
 
-  Devemos usar property para validar os valores
-"""
+  Temos outras vantagens de usar property, essa é a que aplicamos neste exemplo.
+  """
 
 from helper import clear
 clear.clear()
@@ -21,4 +21,3 @@ class Conta:
   
 conta = Conta(10)
 print(f"Saldo real: {conta._saldo}")
-print(f"Saldo real: {conta.saldo}")
