@@ -23,7 +23,8 @@ class Resturante:
     return f'{self._nome} - {self._categoria} - {self._ativo}'  
   
   """
-  Classmethod: diz que a função pode ser acessada diretamente pela classe, sem precisar de uma instância.
+  Classmethod: diz que a função pode ser acessada diretamente pela classe, sem precisar de 
+  uma instância.
   
   Geralmente recebe como primeiro parâmetro a própria classe (cls), Isso permite que você acesse
   atributos e métodos da classe diretamente, sem precisar de uma instância.
@@ -34,7 +35,7 @@ class Resturante:
   def list(cls):
     print(f'{"Nome":<25} {"Categoria":<25} {"Situação":<10} {"Média":<5}')
     for data in Resturante.data:
-      print(f'{data._nome.ljust(25)} {data._categoria.ljust(25)} {str(data._ativo):<10} {data.calcular_media():<5.2f}')  
+      print(f'{data._nome.ljust(25)} {data._categoria.ljust(25)} {str(data._ativo):<10} {data.calcular_media:<5.2f}')  
 
   def update_ativo(self):
     self._ativo = not self._ativo
@@ -59,7 +60,14 @@ class Resturante:
 
 
   def adicionar_avaliacao(self, cliente, nota):
-    avaliacao = Avaliacao(cliente,nota)
+    score = self._validar_nota(nota)
+    avaliacao = Avaliacao(cliente,score)
     self._avaliacoes.append(avaliacao)
+
+  def _validar_nota(self, nota):
+    if nota > 5:
+      return 5    
+    
+    return nota
 
   
