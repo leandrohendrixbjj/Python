@@ -1,3 +1,17 @@
+"""
+  O que é Abstração?
+
+  Abstração é um dos pilares da Programação Orientada a Objetos (POO) que permite simplificar a 
+  complexidade de um sistema, focando apenas nos aspectos essenciais e ocultando os detalhes 
+  desnecessários.
+
+  Você não precisa saber como um carro funciona internamente para usá-lo. O que importa é: 
+  volante, pedais, câmbio... Isso é abstração!
+
+  Na classe abaixo foi abstraido os detalhes mecânicos e eletrônicos de ligar e desligar um carro.
+
+"""
+
 class Carro:
     def __init__(self, modelo: str):
         self.modelo = modelo
@@ -28,5 +42,6 @@ carro = Carro("Fusca")
 carro.ligar()           
 carro.status()          
 carro.desligar()        
+
 
 
