@@ -1,14 +1,24 @@
-# slice => fatiar, quando você quer uma parte de um objeto, com dict
-from itertools import islice
+"""
+    Slice é uma forma de pegar uma parte de um objeto/String
 
-limit = 2
-data = {
-    1: "Alice",
-    2: "Bruno",
-    3: "Carla",
-    4: "Daniel"
-}
+    sequencia[início:fim:passo]
 
-result = dict(islice(data.items(), limit))
+    início: posição inicial (inclusiva)
+    fim: posição final (exclusiva)    
+"""
 
-print(result)
+data = ['Ana', 'Bruno', 'Carlos', 'Daniela', 'Eduardo']
+
+print(data[1:3])  # ['Bruno', 'Carlos']
+
+print(data[1:])   # ['Bruno', 'Carlos', 'Daniela', 'Eduardo']
+
+print(data[:3])   # ['Ana', 'Bruno', 'Carlos']
+
+print(data[:])    # ['Ana', 'Bruno', 'Carlos', 'Daniela', 'Eduardo']
+
+print(data[-1])    # 'Eduardo'
+
+print(data[-2:])  # ['Daniela', 'Eduardo']
+
+

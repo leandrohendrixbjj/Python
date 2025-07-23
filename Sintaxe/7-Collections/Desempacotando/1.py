@@ -1,6 +1,12 @@
-# O desempacotamento com ** (para dicionários) e * (para listas/tuplas) é um recurso muito útil 
+"""
+  O ** em Python é usado para desempacotar dicionários.
+"""
 
-data = {"nome": "Maria", "idade": 30}
+data = {
+  "nome": "Maria", 
+  "idade": 30
+}
+
 complement = {"cidade": "São Paulo"}
 
 # Unindo os dois dicionários:

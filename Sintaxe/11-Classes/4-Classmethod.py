@@ -1,3 +1,11 @@
+"""
+  Classmethod: diz que a função pode ser acessada diretamente pela classe, sem precisar de uma 
+  instância. Geralmente recebe como primeiro parâmetro a própria classe (cls), Isso permite que 
+  você acesse atributos e métodos da classe diretamente, sem precisar de uma instância.
+
+  Lembrado que existem diferenças importantes entre classmethod e staticmethod
+  """  
+  
 class Conta:
     taxa = 0.05  # Atributo de classe, taxa de juros
 
