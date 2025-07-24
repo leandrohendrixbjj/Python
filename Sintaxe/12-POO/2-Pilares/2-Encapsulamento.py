@@ -4,7 +4,7 @@
   Um dos pilares da Programação Orientada a Objetos (POO) é o encapsulamento, que permite
   proteger os dados de uma classe, tornando-os acessíveis apenas através de métodos específicos.
 
-  Beneficios do Encapsulamento:
+  Para que serve? 
   - Segurança: impede acesso direto a atributos sensíveis
   - Controle: você define como os dados podem ser lidos ou alterados    
   - Clareza: separa o como funciona do como se usa

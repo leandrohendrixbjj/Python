@@ -10,7 +10,7 @@ class Animal:
     def __init__(self, nome: str):
         self.nome = nome
 
-    def come(self):
+    def comer(self):
         return "Come alguma coisa"
     
 class Cachorro(Animal):
@@ -22,5 +22,5 @@ class Gato(Animal):
 dog = Cachorro("Rex")
 cat = Gato("Mia")
 
-print(f"{dog.nome} come: {dog.come()}")  
-print(f"{cat.nome} come: {cat.come()}")  
+print(f"{dog.nome} come: {dog.falar()}")  # Rex diz: Au Au
+print(f"{cat.nome} come: {cat.falar()}")  # Mia diz:            
