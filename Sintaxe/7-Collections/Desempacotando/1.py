@@ -1,14 +1,15 @@
 """
-  O ** em Python é usado para desempacotar dicionários.
+  Desempacotamento com **: unir dois dicionários em um só.
 """
 
-data = {
-  "nome": "Maria", 
-  "idade": 30
+person = {
+    "name": "John",
+    "age": 30    
 }
 
-complement = {"cidade": "São Paulo"}
+complement = {"city": "New York"}
 
 # Unindo os dois dicionários:
-info = {**data, **complement}
-print(info) # {'nome': 'Maria', 'idade': 30, 'cidade': 'São Paulo'}
+data = {**person, **complement}
+
+print(data) # {'name': 'John', 'age': 30, 'city': 'New York'}

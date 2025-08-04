@@ -1,16 +1,13 @@
-"""
-  Percorre o array data somando o valor de score de cada aluno.
-"""
-
-from helper import clear
-clear.clear()
+# For: Impressão de uma Matriz Simples
 
 data = [
-  {'student': 'Alice', 'score': 10},
-  {'student': 'Bob', 'score': 9},
-  {'student': 'Charlie', 'score': 7.5},
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
 ]
 
-total = sum(student['score'] for student in data)  
-
-print(f'Total score: {total}')  
+for row in data:    
+    for element in row:
+        print(f"{element}", end=' ')        
+    print()
+    

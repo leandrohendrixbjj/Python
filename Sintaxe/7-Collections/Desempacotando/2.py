@@ -1,12 +1,16 @@
-
-data = {
-  "nome": "Maria", 
-  "idade": 30
+"""
+ O Python: escreve o novo dicionário da esquerda para a direita, sobrescrevendo as chaves 
+ duplicadas.
+"""
+person = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
 }
 
-new_age = {"idade": 40}  # valor sobrescrito
+# sobrescreve a chave 'city'
+complement = {'city': 'Sao Paulo', 'country': 'Brazil'}
 
-info = {**data, **new_age}
+data = {**person, **complement}
 
-print(info) #{'nome': 'Maria', 'idade': 40}
-
+print(data)  # {'name': 'John', 'age': 30, 'city': 'Los Angeles', 'country': 'USA'}

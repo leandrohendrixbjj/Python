@@ -1,0 +1,3 @@
+# lista os pacotes instalados no ambiente Python que está sendo usado no momento não 
+  necessariamente apenas os pacotes de um projeto específico
+py -m pip list => Lita de Pacotes disponíveis
