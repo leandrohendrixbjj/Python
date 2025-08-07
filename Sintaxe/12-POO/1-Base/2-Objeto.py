@@ -1,12 +1,11 @@
 """
   O que é um objeto?
-  E a instância da classe. A classe é a planta do prédio, enquanto o objeto é o prédio construído
-  a partir dessa planta.
+  E a instância da classe. A classe é a planta do prédio, enquanto o objeto é 
+  o prédio  construído a partir dessa planta.
 
-  O objeto pronto segue o que está na planta, mas é uma entidade independente, que ocupa espaço
-  tem endereço, e pode ser manipulado.
+  O objeto pronto segue o que está na planta, mas é uma entidade independente, 
+  que ocupa espaço tem endereço, e pode ser manipulado.
 """
-
 
 class Predio:
     def __init__(self, nome: str, andares: int):
