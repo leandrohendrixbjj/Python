@@ -1,19 +1,29 @@
 BEGIN;
 -- Deleta a tabela 'pessoa' se ela já existir
 DROP TABLE IF EXISTS pessoas ;
+DROP TABLE IF EXISTS nota_fiscal;
 
 -- Cria a tabela 'pessoa' novamente
 CREATE TABLE pessoas (
-    id SERIAL PRIMARY KEY, -- Campo ID autoincremento
+    pessoa_id SERIAL PRIMARY KEY, -- Campo ID autoincremento
     nome VARCHAR(255) NOT NULL, -- Nome da pessoa
     email VARCHAR(255), -- Email da pessoa, pode ser nulo
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- UTC    
     data_resposta TIMESTAMP WITH TIME ZONE DEFAULT NOW() -- Timezone SP
 );
 
--- Opcional: Inserir uma pessoa de exemplo
-INSERT INTO pessoa (nome) VALUES ('Pessoa de Exemplo');
+CREATE TABLE nota_fiscal (
+    nota_fiscal_id SERIAL PRIMARY KEY,
+    numero VARCHAR(50) NOT NULL,
+    data_emissao TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    total NUMERIC(12, 2) NOT NULL
+);
 
-select * from pessoa;
+-- Pessoa
+INSERT INTO pessoas (nome) VALUES ('Pessoa de Exemplo');
+
+-- Pessoa
+INSERT INTO nota_fiscal (numero,total) VALUES (1,100);
+
 
 COMMIT;
