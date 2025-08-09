@@ -22,7 +22,7 @@ async def criar_pessoa(pessoa: PessoaCreate):
         query = """
         INSERT INTO pessoas (nome, data_resposta, email)
         VALUES ($1, $2, $3)
-        RETURNING id, nome, data_criacao, data_resposta, email
+        RETURNING id, nome, data_resposta, email
         """
         values = (pessoa.nome, data_resposta, pessoa.email)
         
