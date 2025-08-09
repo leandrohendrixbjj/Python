@@ -2,7 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from infra.database_connection import connect_to_db
 from schema.Pessoa import PessoaCreate, PessoaResponse
-from crud import criar_pessoa
+from crud.pessoa import criar_pessoa
 
 app = FastAPI()
 
