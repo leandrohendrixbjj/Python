@@ -16,7 +16,11 @@ CREATE TABLE nota_fiscal (
     nota_fiscal_id SERIAL PRIMARY KEY,
     numero VARCHAR(50) NOT NULL,
     data_emissao TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    total NUMERIC(12, 2) NOT NULL
+    total NUMERIC(12, 2) NOT NULL,
+    pessoa_id INTEGER NOT NULL,
+    CONSTRAINT fk_pessoa
+      FOREIGN KEY(pessoa_id) REFERENCES pessoas(pessoa_id)
+      ON DELETE CASCADE
 );
 
 -- Pessoa

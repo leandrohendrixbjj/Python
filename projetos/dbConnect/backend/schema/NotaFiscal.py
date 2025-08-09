@@ -1,11 +1,12 @@
 from datetime import datetime
 from pydantic import BaseModel, condecimal
 
-class NotaFiscalCreate(BaseModel):
+class NotaFiscalBase(BaseModel):
     numero: str
     total: condecimal(max_digits=12, decimal_places=2)
+    pessoa_id: int
 
-class NotaFiscalCreate(NotaFiscalCreate):
+class NotaFiscalCreate(NotaFiscalBase):
     pass
 
 class NotaFiscalResponse(BaseModel):
@@ -13,6 +14,7 @@ class NotaFiscalResponse(BaseModel):
     numero: str
     data_emissao: datetime
     total: condecimal(max_digits=12, decimal_places=2)
+    pessoa_id: int
 
     class Config:
         orm_mode = True

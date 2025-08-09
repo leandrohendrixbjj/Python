@@ -5,7 +5,7 @@
 """
 from sqlalchemy import Column, DateTime, Integer, String
 from database import Base
-
+from sqlalchemy.orm import relationship 
 
 class Pessoa(Base):
     __tablename__ = "pessoas"
@@ -14,3 +14,4 @@ class Pessoa(Base):
     nome = Column(String, nullable=False)
     data_resposta = Column(DateTime)
     email = Column(String, nullable=True)
+    notas = relationship("NotaFiscal", back_populates="pessoa", cascade="all, delete-orphan")
