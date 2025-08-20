@@ -4,8 +4,10 @@
   O que é: método especial dentro de uma classe, chamado automaticamente quando 
   você cria um objeto da classe.
 
-  Para que serve: Garantir que o objeto já comece com os dados necessários para funcionar 
-  corretamente.
+  Para que serve: 
+    Garantir que o objeto já comece com os dados obrigatórios para funcionar corretamente.
+    Gatantir consistência na criação do objeto ( Criar uma pessoal sempre com idade 0)
+
 
 """
 from helper import clear

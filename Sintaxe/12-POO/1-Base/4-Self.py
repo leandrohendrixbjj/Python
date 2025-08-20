@@ -1,10 +1,17 @@
 """
   SELF:
 
-  O que é: é uma convenção, o nome dado para o primeiro parâmetro de qualquer método 
-  dentro de uma classe. Representa a própria instância do objeto que está executando o método.
+  O que é: referência para o próprio objeto que está sendo manipulado. 
+  
+  Outras linguagens têm algo parecido:
+    Java / C# → this
+    Java / C# → this
    
-  Para que serve: permite que o método acesse os atributos e outros métodos da instância
+  Para que serve: 
+    Imagine que cada objeto é uma ficha de cadastro, O self é como dizer:
+       Este campo pertence a esta ficha em particular, não às outras.
+    
+    self é o jeito do Python dizer “este objeto aqui”.   
 """
 
 class Person:
